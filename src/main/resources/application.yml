@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:example@localhost/files?authSource=admin
+  security:
+    oauth2:
+      client:
+        registration:
+          tinkoff:
+            provider: tinkoff
+            client-id: xxx
+            client-secret: xxx
+            scope:
+              - openid
+        provider:
+          tinkoff:
+            issuer-uri: https://fs.tinkoff.ru/adfs
+
+chat-gpt:
+  base-url: https://openai-proxy.tcsbank.ru
+text:
+  max-length: 4000

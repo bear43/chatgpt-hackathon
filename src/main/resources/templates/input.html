@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatGPT</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Ваш вопрос</h1>
+    <form action="#" th:action="@{/pages/input}" method="post">
+      <textarea class="form-control" rows="3" name="text" placeholder="Введите ваш вопрос"></textarea>
+      <button style="margin-top: 10px" type="submit" class="btn btn-primary">Задать</button>
+    </form>
+    <div th:if="${answer != null}">
+      <h3>Вопрос</h3>
+      <div th:text="${question}"></div>
+      <h3>Ответ</h3>
+      <div th:text="${answer}"></div>
+    </div>
+  </div>
+</body>
+</html>
