@@ -7,4 +7,6 @@ for ChatGPT and then introduce client's request to it.
 Use mongo to keep files with tags. 
 Database "files" should be created manually.
 Files uploading mechanism is not finished, 
-you should add text and tags right into new document in collection "files"."ClusterizedText"
+you should add text and tags right into new document in collection "files"."ClusterizedText".
+Also you should use your client-id and client-secret for using tinkoff ADFS
+
